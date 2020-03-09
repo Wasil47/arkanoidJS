@@ -13,6 +13,12 @@ body {
   background: #303841;
 }
 
+#wh {
+  width: calc(40em / 12);
+  height: calc(40em / 12 / 2);
+  visibility: hidden;
+}
+
 #arkanoid {
   margin: auto;
   position: relative;
@@ -23,6 +29,7 @@ body {
 #arkanoid #arka-board {
   width: 100%;
   height: 100%;
+  cursor: none;
 }
 
 #arkanoid #arka-board #arka-map {
@@ -42,17 +49,6 @@ body {
   background: green;
 }
 
-#arkanoid #arka-board #arka-map .hidden {
-  visibility: hidden;
-  -webkit-transform: translateY(40em);
-          transform: translateY(40em);
-  position: absolute;
-  top: translateY(40em);
-  width: 0;
-  height: 0;
-  z-index: -99;
-}
-
 #arkanoid #arka-board #player-range {
   position: absolute;
   width: 100%;
@@ -62,7 +58,7 @@ body {
 }
 
 #arkanoid #arka-board #player-range #player {
-  width: calc(40em / 12);
+  width: calc(40em / 12 * 2);
   height: calc(40em / 12 / 2);
   background: purple;
   border-radius: 10%;

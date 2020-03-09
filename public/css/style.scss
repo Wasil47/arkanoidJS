@@ -37,6 +37,11 @@ body {
   background: $background-color;
 }
 
+#wh {
+  width: calc(#{$gameWidth} / 12);
+  height: calc(#{$gameWidth} / 12 / 2);
+  visibility: hidden;
+}
 #arkanoid {
   margin: auto;
   position: relative;
@@ -46,6 +51,7 @@ body {
   #arka-board {
     width: 100%;
     height: 100%;
+    cursor: none;
     #arka-map {
       width: 100%;
       display: grid;
@@ -57,18 +63,6 @@ body {
         height: calc(#{$gameWidth} / 12 / 2);
         background: green;
       }
-      .hidden {
-        visibility: hidden;
-        transform: translateY($gameHeight);
-        position: absolute;
-        top: translateY($gameHeight);
-        width: 0;
-        height: 0;
-        z-index: -99;
-        // background: red;
-        // width: calc(#{$gameWidth} / 12);
-        // height: calc(#{$gameWidth} / 12 / 2);
-      }
     }
     #player-range {
       position: absolute;
@@ -78,7 +72,7 @@ body {
       bottom: 0;      
       
       #player {
-        width: calc(#{$gameWidth} / 12);
+        width: calc(#{$gameWidth} / 12 * 2);
         height: calc(#{$gameWidth} / 12 / 2);
         background: purple;
         border-radius: 10%;
